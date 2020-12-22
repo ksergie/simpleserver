@@ -47,12 +47,15 @@ const requestHandler = (req, res) => {
         });
 
     }
-    res.setHeader('Content-Type', 'text/html');
+
     res.write('<html>');
-    res.write('<head><title>Main page</title></head>');
-    res.write('<body><h1>Welcome the Page!</h1></body>');
+    res.write('<head><title>Page not found</title></head>');
+    res.write('<body>');
+    res.write('<h1>Page not found</h1>');
+    res.write('</body>');
     res.write('</html>');
-    res.end();
+    return res.end();
+
 }
 
 module.exports = {
